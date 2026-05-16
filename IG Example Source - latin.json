@@ -1,0 +1,1237 @@
+// PUT using "https://[myHost]/Bundle"
+// PUT creates if id not found otherwise does an update
+{
+    "resourceType": "Bundle",
+    "type": "transaction",
+    "entry": [
+        //----------------------------
+        // ResearchStudy/Exemplar-ResearchStudy-001
+        {
+            "resource": {
+                "resourceType": "ResearchStudy",
+                "id": "Exemplar-ResearchStudy-001",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study-profile"
+                    ]
+                },
+                "language": "en",
+                "text": {
+                    "status": "extensions",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: ResearchStudy Exemplar-ResearchStudy-001</b></p><a name=\"Exemplar-ResearchStudy-001\"> </a><a name=\"hcExemplar-ResearchStudy-001\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-m11-research-study-profile.html\">M11 Research Study Profile</a></p></div><p><b>M11_ConfidentialityStatement</b>: All data is confidential</p><blockquote><p><b>M11 Research Study Extension</b></p><ul><li>originalProtocol: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C218488}\">Protocol Previously Amended See Summary of Changes Before the Table of Contents</span></li><li>versionDate: 2017-10-01</li></ul></blockquote><blockquote><p><b>M11_Approval</b></p><ul><li>approvalDate: 2017-10-05</li><li>signature: No display for Signature  (data: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPEVudmVsb3BlIHhtbG5zPSJ1cm46ZW52ZWxvcGUiPgogIDxTaWduYXR1cmUgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPgogICAgPFNpZ25lZEluZm8+CiAgICAgIDxDYW5vbmljYWxpemF0aW9uTWV0aG9kIAogICAgICAgICAgIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMteG1sLWMxNG4tCjIwMDEwMzE1I1dpdGhDb21tZW50cyIvPgogICAgICA8U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS8KeG1sZHNpZyNkc2Etc2hhMSIvPgogICAgICA8UmVmZXJlbmNlIFVSST0iIj4KICAgICAgICA8VHJhbnNmb3Jtcz4KICAgICAgICAgIDxUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5Lwp4bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KICAgICAgICA8L1RyYW5zZm9ybXM+CiAgICAgICAgPERpZ2VzdE1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkvCnhtbGRzaWcjc2hhMSIvPgogICAgICAgIDxEaWdlc3RWYWx1ZT51b29xYldZYTVWQ3FjSkNidXltQktxbTE3dlk9PC9EaWdlc3RWYWx1ZT4KICAgICAgPC9SZWZlcmVuY2U+CiAgICA8L1NpZ25lZEluZm8+CjxTaWduYXR1cmVWYWx1ZT4KS2VkSnVUb2I1Z3R2WXg5cU0zazNnbTdrYkxCd1ZiRVFSbDI2UzJ0bVhqcU5ORDdNUkd0b2V3PT0KICAgIDwvU2lnbmF0dXJlVmFsdWU+CiAgICA8S2V5SW5mbz4KICAgICAgPEtleVZhbHVlPgogICAgICAgIDxEU0FLZXlWYWx1ZT4KICAgICAgICAgIDxQPgovS2FDem80U3lyb203OHozRVE1U2JiQjRzRjdleTgwZXRLSUk4NjRXRjY0QjgxdVJwSDV0OWpRVHhlCkV1MEltYnpSTXF6VkRaa1ZHOXhEN25OMWt1Rnc9PQogICAgICAgICAgPC9QPgogICAgICAgICAgPFE+bGk3ZHpEYWN1bzY3Smc3bXRxRW0yVFJ1T01VPTwvUT4KICAgICAgICAgIDxHPlo0UnhzbnFjOUU3cEdrbkZGSDJ4cWFyeVJQQmFRMDFraHBNZExSUW5HNTQxQXd0eC8KWFBhRjVCcHN5NHBOV01PSENCaU5VME5vZ3BzUVc1UXZubE1wQT09CiAgICAgICAgICA8L0c+CiAgICAgICAgICA8WT5xVjM4SXFyV0pHMFYvCm1aUXZSVmkxT0h3OVpqODRuREM0ak84UDBheGkxZ2I2ZCs0NzV5aE1qU2MvCkJySVZDNThXM3lkYmtLK1JpNE9LYmFSWmxZZVJBPT0KICAgICAgICAgPC9ZPgogICAgICAgIDwvRFNBS2V5VmFsdWU+CiAgICAgIDwvS2V5VmFsdWU+CiAgICA8L0tleUluZm8+CiAgPC9TaWduYXR1cmU+CjwvRW52ZWxvcGU+IA==)</li><li>signatureUrl: <a href=\"https://somelocation\">https://somelocation</a></li><li>signatureMethod: electronic and wet ink copy</li></ul></blockquote><p><b>Narrative Elements</b>: <a href=\"Composition-Exemplar-Narrative.html\">Composition Exemplar Protocol Narratives</a></p><p><b>Narrative Elements</b>: <a href=\"Composition-Exemplar-Narrative-2.1.html\">Composition Exemplar Protocol Narrative 2.1</a></p><p><b>identifier</b>: Sponsor Protocol Identifier/ABC-Exemplar, EU CT Number/EU-1234, Other Regulatory or Clinical Trial Identifier/ERA1234, Amendment Identifier/ABC-Exemplar(a)</p><p><b>version</b>: (a)</p><p><b>title</b>: A Phase 3 Study of Inhaled Exoticillin compared to Intramuscular Exoticillin for Treatment of Bronchtis Japanese Patients with Iatrogenic Diabetes Mellitus</p><blockquote><p><b>label</b></p><p><b>type</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C207646}\">Study Acronym</span></p><p><b>value</b>: Inhaled vs IM Exoticillin</p></blockquote><blockquote><p><b>label</b></p><p><b>type</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C207615}\">Brief Study Title</span></p><p><b>value</b>: A Phase 3 Study of Inhaled versus Intramuscular Exoticillin for Bronchtis in Diabetic Japanese Patients</p></blockquote><h3>RelatesTos</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Type</b></td><td><b>Target[x]</b></td></tr><tr><td style=\"display: none\">*</td><td>Justification</td><td><a href=\"ResearchStudy-Exemplar-ResearchStudy-Current-Amendment.html\">ResearchStudy: extension = ,,; identifier = Sponsor Protocol Identifier: ABC-Exemplar\u00a0(use:\u00a0usual,\u00a0); version = (a); status = active</a></td></tr></table><p><b>status</b>: Active</p><p><b>phase</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C15602}\">Phase III Trial</span></p><h3>Focus</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Reference</b></td></tr><tr><td style=\"display: none\">*</td><td><a href=\"MedicinalProductDefinition-Exemplar-MedicinalProduct.html\">MedicinalProductDefinition: identifier = Sponsor's Investigational Product Code: EX2015/03</a></td></tr></table><p><b>condition</b>: <span title=\"Codes:{http://snomed.info/sct 1137328006}\">Iatrogenic hypoglycaemia</span></p><blockquote><p><b>associatedParty</b></p><p><b>role</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C70793}\">Clinical Study Sponsor</span></p><p><b>party</b>: <a href=\"Organization-Exemplar-Sponsor-Organization.html\">Organization Exemplar Pharmaceuticals Co.</a></p></blockquote><blockquote><p><b>associatedParty</b></p><p><b>role</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C70793}\">Clinical Study Sponsor</span></p><p><b>party</b>: <a href=\"Practitioner-Exemplar-Sponsor-Practitioner.html\">Practitioner Dr Exemplar Practitioner</a></p></blockquote><blockquote><p><b>associatedParty</b></p><p><b>role</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C215669}\">Study Co-Sponsor</span></p><p><b>party</b>: <a href=\"Organization-Exemplar-CoSponsor-Organization.html\">Organization Exemplar Pharmazeutika GmBH.</a></p></blockquote><blockquote><p><b>associatedParty</b></p><p><b>role</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C215669}\">Study Co-Sponsor</span></p><p><b>party</b>: <a href=\"Practitioner-Exemplar-CoSponsor-Practitioner.html\">Practitioner Dr Exemplar von Practitioner</a></p></blockquote><blockquote><p><b>associatedParty</b></p><p><b>role</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C215670}\">Local Legal Sponsor</span></p><p><b>party</b>: <a href=\"Organization-Exemplar-Local-Sponsor-Organization.html\">Organization Fictive Pharmaceuticals (Australia) Pty</a></p></blockquote><blockquote><p><b>associatedParty</b></p><p><b>role</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C215670}\">Local Legal Sponsor</span></p><p><b>party</b>: <a href=\"Practitioner-Exemplar-Local-Sponsor-Practitioner.html\">Practitioner Bruce Exemplar</a></p></blockquote><blockquote><p><b>associatedParty</b></p><p><b>role</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C156625}\">Device Manufacturer</span></p><p><b>party</b>: <a href=\"Organization-Exemplar-Devices-Organization.html\">Organization Exemplar Devices Ltd</a></p></blockquote><blockquote><p><b>associatedParty</b></p><p><b>role</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C51876}\">Sponsor Medical Expert</span></p><p><b>party</b>: <a href=\"Practitioner-Exemplar-Sponsor-Expert-Practitioner.html\">Practitioner Dr Exemplar Consultant</a></p></blockquote></div>"
+                },
+                "extension": [
+                    {
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-confidentiality-statement",
+                        "valueString": "All data is confidential"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "originalProtocol",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "code": "C218488",
+                                            "display": "Protocol Previously Amended See Summary of Changes Before the Table of Contents"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "versionDate",
+                                "valueDate": "2017-10-01"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "approvalDate",
+                                "valueDate": "2017-10-05"
+                            },
+                            {
+                                "url": "signature",
+                                "valueSignature": {
+                                    "data": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPEVudmVsb3BlIHhtbG5zPSJ1cm46ZW52ZWxvcGUiPgogIDxTaWduYXR1cmUgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPgogICAgPFNpZ25lZEluZm8+CiAgICAgIDxDYW5vbmljYWxpemF0aW9uTWV0aG9kIAogICAgICAgICAgIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMteG1sLWMxNG4tCjIwMDEwMzE1I1dpdGhDb21tZW50cyIvPgogICAgICA8U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS8KeG1sZHNpZyNkc2Etc2hhMSIvPgogICAgICA8UmVmZXJlbmNlIFVSST0iIj4KICAgICAgICA8VHJhbnNmb3Jtcz4KICAgICAgICAgIDxUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5Lwp4bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KICAgICAgICA8L1RyYW5zZm9ybXM+CiAgICAgICAgPERpZ2VzdE1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkvCnhtbGRzaWcjc2hhMSIvPgogICAgICAgIDxEaWdlc3RWYWx1ZT51b29xYldZYTVWQ3FjSkNidXltQktxbTE3dlk9PC9EaWdlc3RWYWx1ZT4KICAgICAgPC9SZWZlcmVuY2U+CiAgICA8L1NpZ25lZEluZm8+CjxTaWduYXR1cmVWYWx1ZT4KS2VkSnVUb2I1Z3R2WXg5cU0zazNnbTdrYkxCd1ZiRVFSbDI2UzJ0bVhqcU5ORDdNUkd0b2V3PT0KICAgIDwvU2lnbmF0dXJlVmFsdWU+CiAgICA8S2V5SW5mbz4KICAgICAgPEtleVZhbHVlPgogICAgICAgIDxEU0FLZXlWYWx1ZT4KICAgICAgICAgIDxQPgovS2FDem80U3lyb203OHozRVE1U2JiQjRzRjdleTgwZXRLSUk4NjRXRjY0QjgxdVJwSDV0OWpRVHhlCkV1MEltYnpSTXF6VkRaa1ZHOXhEN25OMWt1Rnc9PQogICAgICAgICAgPC9QPgogICAgICAgICAgPFE+bGk3ZHpEYWN1bzY3Smc3bXRxRW0yVFJ1T01VPTwvUT4KICAgICAgICAgIDxHPlo0UnhzbnFjOUU3cEdrbkZGSDJ4cWFyeVJQQmFRMDFraHBNZExSUW5HNTQxQXd0eC8KWFBhRjVCcHN5NHBOV01PSENCaU5VME5vZ3BzUVc1UXZubE1wQT09CiAgICAgICAgICA8L0c+CiAgICAgICAgICA8WT5xVjM4SXFyV0pHMFYvCm1aUXZSVmkxT0h3OVpqODRuREM0ak84UDBheGkxZ2I2ZCs0NzV5aE1qU2MvCkJySVZDNThXM3lkYmtLK1JpNE9LYmFSWmxZZVJBPT0KICAgICAgICAgPC9ZPgogICAgICAgIDwvRFNBS2V5VmFsdWU+CiAgICAgIDwvS2V5VmFsdWU+CiAgICA8L0tleUluZm8+CiAgPC9TaWduYXR1cmU+CjwvRW52ZWxvcGU+IA=="
+                                }
+                            },
+                            {
+                                "url": "signatureUrl",
+                                "valueUrl": "https://somelocation"
+                            },
+                            {
+                                "url": "signatureMethod",
+                                "valueString": "electronic and wet ink copy"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-approval"
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/narrative-elements",
+                        "valueReference": {
+                            "reference": "Composition/Exemplar-Narrative"
+                        }
+                    },
+                    {
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/narrative-elements",
+                        "valueReference": {
+                            "reference": "Composition/Exemplar-Narrative-2.1"
+                        }
+                    }
+                ],
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C132351",
+                                    "display": "Sponsor Protocol Identifier"
+                                }
+                            ]
+                        },
+                        "system": "https://exemplarSponsor.com/sponsor-identifier",
+                        "value": "ABC-Exemplar"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C218684"
+                                }
+                            ],
+                            "text": "EU CT Number"
+                        },
+                        "system": "https://exemplarEMA.org/registry-identifier",
+                        "value": "EU-1234"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C218690"
+                                }
+                            ],
+                            "text": "Other Regulatory or Clinical Trial Identifier"
+                        },
+                        "system": "https://exemplarRegulator.org/registry-identifier",
+                        "value": "ERA1234",
+                        "assigner": {
+                            "reference": "Organization/Exemplar-Regulator-Organization"
+                        }
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C218477"
+                                }
+                            ],
+                            "text": "Amendment Identifier"
+                        },
+                        "system": "https://example.org/amendment-identifier",
+                        "value": "ABC-Exemplar(a)"
+                    }
+                ],
+                "version": "(a)",
+                "title": "A Phase 3 Study of Inhaled Exoticillin compared to Intramuscular Exoticillin for Treatment of Bronchtis Japanese Patients with Iatrogenic Diabetes Mellitus",
+                "label": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C207646",
+                                    "display": "Study Acronym"
+                                }
+                            ]
+                        },
+                        "value": "Inhaled vs IM Exoticillin"
+                    },
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C207615",
+                                    "display": "Brief Study Title"
+                                }
+                            ]
+                        },
+                        "value": "A Phase 3 Study of Inhaled versus Intramuscular Exoticillin for Bronchtis in Diabetic Japanese Patients"
+                    }
+                ],
+                "relatesTo": [
+                    {
+                        "type": "justification",
+                        "targetReference": {
+                            "reference": "ResearchStudy/Exemplar-ResearchStudy-Current-Amendment"
+                        }
+                    }
+                ],
+                "status": "active",
+                "phase": {
+                    "coding": [
+                        {
+                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                            "code": "C15602",
+                            "display": "Phase III Trial"
+                        }
+                    ]
+                },
+                "focus": [
+                    {
+                        "reference": {
+                            "reference": "MedicinalProductDefinition/Exemplar-MedicinalProduct"
+                        }
+                    }
+                ],
+                "condition": [
+                    {
+                        "coding": [
+                            {
+                                "system": "http://snomed.info/sct",
+                                "code": "1137328006",
+                                "display": "Iatrogenic hypoglycaemia"
+                            }
+                        ]
+                    }
+                ],
+                "associatedParty": [
+                    {
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C70793",
+                                    "display": "Clinical Study Sponsor"
+                                }
+                            ]
+                        },
+                        "party": {
+                            "reference": "Organization/Exemplar-Sponsor-Organization"
+                        }
+                    },
+                    {
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C70793",
+                                    "display": "Clinical Study Sponsor"
+                                }
+                            ]
+                        },
+                        "party": {
+                            "reference": "Practitioner/Exemplar-Sponsor-Practitioner"
+                        }
+                    },
+                    {
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C215669",
+                                    "display": "Study Co-Sponsor"
+                                }
+                            ]
+                        },
+                        "party": {
+                            "reference": "Organization/Exemplar-CoSponsor-Organization"
+                        }
+                    },
+                    {
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C215669",
+                                    "display": "Study Co-Sponsor"
+                                }
+                            ]
+                        },
+                        "party": {
+                            "reference": "Practitioner/Exemplar-CoSponsor-Practitioner"
+                        }
+                    },
+                    {
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C215670",
+                                    "display": "Local Legal Sponsor"
+                                }
+                            ]
+                        },
+                        "party": {
+                            "reference": "Organization/Exemplar-Local-Sponsor-Organization"
+                        }
+                    },
+                    {
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C215670",
+                                    "display": "Local Legal Sponsor"
+                                }
+                            ]
+                        },
+                        "party": {
+                            "reference": "Practitioner/Exemplar-Local-Sponsor-Practitioner"
+                        }
+                    },
+                    {
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C156625",
+                                    "display": "Device Manufacturer"
+                                }
+                            ]
+                        },
+                        "party": {
+                            "reference": "Organization/Exemplar-Devices-Organization"
+                        }
+                    },
+                    {
+                        "role": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C51876",
+                                    "display": "Sponsor Medical Expert"
+                                }
+                            ]
+                        },
+                        "party": {
+                            "reference": "Practitioner/Exemplar-Sponsor-Expert-Practitioner"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "ResearchStudy/Exemplar-ResearchStudy-001"
+            }
+        },
+        //----------------------------
+        // Composition/Exemplar-Narrative
+        {
+            "resource": {
+                "resourceType": "Composition",
+                "id": "Exemplar-Narrative",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study-narratives"
+                    ]
+                },
+                "language": "en",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: Composition Exemplar-Narrative</b></p><a name=\"Exemplar-Narrative\"> </a><a name=\"hcExemplar-Narrative\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-m11-research-study-narratives.html\">Research Study Narratives</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C207508}\">Narrative Content Text</span></p><p><b>date</b>: 2025-06-30 12:46:00+0000</p><p><b>author</b>: <a href=\"Organization-Exemplar-Sponsor-Organization.html\">Organization Exemplar Pharmaceuticals Co.</a></p><p><b>title</b>: Exemplar Protocol Narratives</p></div>"
+                },
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                            "code": "C207508"
+                        }
+                    ]
+                },
+                "subject": [
+                    {
+                        "reference": "ResearchStudy/Exemplar-ResearchStudy-001"
+                    }
+                ],
+                "date": "2025-06-30T12:46:00Z",
+                "author": [
+                    {
+                        "reference": "Organization/Exemplar-Sponsor-Organization"
+                    }
+                ],
+                "title": "Exemplar Protocol Narratives",
+                "section": [
+                    {
+                        "title": "1.3 Schedule of Activities",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C218519"
+                                }
+                            ]
+                        },
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><h2>1.3 Schedule of Activities</h2><p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \\&quot;lorem ipsum\\&quot; incipiunt, sed ita translatae non sunt textus laetus.</p></div>"
+                        }
+                    },
+                    {
+                        "title": "3.1 Primary Objective(s) and Associated Estimand(s)",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C218527"
+                                }
+                            ]
+                        },
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><h2>3.1 Primary Objective(s) and Associated Estimand(s)</h2><p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \\&quot;lorem ipsum\\&quot; incipiunt, sed ita translatae non sunt textus laetus.</p><h3>3.1.1 Primary Objective</h3><p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \\&quot;lorem ipsum\\&quot; incipiunt, sed ita translatae non sunt textus laetus.</p></div>"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Composition/Exemplar-Narrative"
+            }
+        },
+        //----------------------------
+        // Composition/Exemplar-Narrative-2.1
+        {
+            "resource": {
+                "resourceType": "Composition",
+                "id": "Exemplar-Narrative-2.1",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study-narratives"
+                    ]
+                },
+                "language": "en",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: Composition Exemplar-Narrative-2.1</b></p><a name=\"Exemplar-Narrative-2.1\"> </a><a name=\"hcExemplar-Narrative-2.1\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-m11-research-study-narratives.html\">Research Study Narratives</a></p></div><p><b>status</b>: Final</p><p><b>type</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C207508}\">Narrative Content Text</span></p><p><b>date</b>: 2025-06-03 12:46:00+0000</p><p><b>author</b>: <a href=\"Organization-Exemplar-Sponsor-Organization.html\">Organization Exemplar Pharmaceuticals Co.</a></p><p><b>title</b>: Exemplar Protocol Narrative 2.1</p></div>"
+                },
+                "status": "final",
+                "type": {
+                    "coding": [
+                        {
+                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                            "code": "C207508"
+                        }
+                    ]
+                },
+                "subject": [
+                    {
+                        "reference": "ResearchStudy/Exemplar-ResearchStudy-001"
+                    }
+                ],
+                "date": "2025-06-03T12:46:00Z",
+                "author": [
+                    {
+                        "reference": "Organization/Exemplar-Sponsor-Organization"
+                    }
+                ],
+                "title": "Exemplar Protocol Narrative 2.1",
+                "section": [
+                    {
+                        "title": "2.1 Purpose of Trial",
+                        "code": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C218521"
+                                }
+                            ]
+                        },
+                        "text": {
+                            "status": "additional",
+                            "div": "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><h1>2 INTRODUCTION</h1><h2>2.1 Purpose of Trial</h2><p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \\&quot;lorem ipsum\\&quot; incipiunt, sed ita translatae non sunt textus laetus.</p><h2>2.2 Assessment of Risks and Benefits</h2><p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \\&quot;lorem ipsum\\&quot; incipiunt, sed ita translatae non sunt textus laetus.</p><h3>2.2.1 Risk Summary and Mitigation Strategy</h3><p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \\&quot;lorem ipsum\\&quot; incipiunt, sed ita translatae non sunt textus laetus.</p><h3>2.2.2 Benefit Summary</h3><p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \\&quot;lorem ipsum\\&quot; incipiunt, sed ita translatae non sunt textus laetus.</p><h3>2.2.3 Overall Risk-Benefit Assessment</h3><p>Hic textus tantummodo locum tenens est. Nullum verum sensum habet praeter spatium in pagina vel velo implere. Utile tamen est ad rem illustrandam. Huiusmodi ineptiae plerumque cum \\&quot;lorem ipsum\\&quot; incipiunt, sed ita translatae non sunt textus laetus.</p></div>"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Composition/Exemplar-Narrative-2.1"
+            }
+        },
+        //----------------------------
+        // MedicinalProductDefinition/Exemplar-MedicinalProduct
+        {
+            "resource": {
+                "resourceType": "MedicinalProductDefinition",
+                "id": "Exemplar-MedicinalProduct",
+                "language": "en",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: MedicinalProductDefinition Exemplar-MedicinalProduct</b></p><a name=\"Exemplar-MedicinalProduct\"> </a><a name=\"hcExemplar-MedicinalProduct\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><p><b>identifier</b>: Sponsor's Investigational Product Code/EX2015/03</p><blockquote><p><b>name</b></p><p><b>productName</b>: exoticillin 100micrograms/dose dry powder inhaler</p><p><b>type</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C97054}\">Nonproprietary Name(s)</span></p></blockquote><blockquote><p><b>name</b></p><p><b>productName</b>: Exotex 100 Inhaler</p><p><b>type</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C71898}\">Proprietary Name(s)</span></p></blockquote></div>"
+                },
+                "identifier": [
+                    {
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C218675",
+                                    "display": "Sponsor's Investigational Product Code"
+                                }
+                            ]
+                        },
+                        "system": "https://exemplarSponsor.com/sponsor-identifier",
+                        "value": "EX2015/03"
+                    }
+                ],
+                "name": [
+                    {
+                        "productName": "exoticillin 100micrograms/dose dry powder inhaler",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C97054",
+                                    "display": "Nonproprietary Name(s)"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "productName": "Exotex 100 Inhaler",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C71898",
+                                    "display": "Proprietary Name(s)"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "MedicinalProductDefinition/Exemplar-MedicinalProduct"
+            }
+        },
+        //----------------------------
+        // Organization/Exemplar-CoSponsor-Organization
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "Exemplar-CoSponsor-Organization",
+                "language": "en",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Exemplar-CoSponsor-Organization</b></p><a name=\"Exemplar-CoSponsor-Organization\"> </a><a name=\"hcExemplar-CoSponsor-Organization\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><p><b>name</b>: Exemplar Pharmazeutika GmBH.</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Purpose</b></td><td><b>Address</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/contactentity-type ADMIN}\">Administrative</span></td><td>Exemplar Strasse Exemplarburg 75172 Germany </td></tr></table></div>"
+                },
+                "name": "Exemplar Pharmazeutika GmBH.",
+                "contact": [
+                    {
+                        "purpose": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/contactentity-type",
+                                    "code": "ADMIN",
+                                    "display": "Administrative"
+                                }
+                            ]
+                        },
+                        "address": {
+                            "line": [
+                                "Exemplar Strasse"
+                            ],
+                            "city": "Exemplarburg",
+                            "postalCode": "75172",
+                            "country": "Germany"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/Exemplar-CoSponsor-Organization"
+            }
+        },
+        //----------------------------
+        // Organization/Exemplar-Devices-Organization
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "Exemplar-Devices-Organization",
+                "language": "en",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Exemplar-Devices-Organization</b></p><a name=\"Exemplar-Devices-Organization\"> </a><a name=\"hcExemplar-Devices-Organization\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><p><b>name</b>: Exemplar Devices Ltd</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Purpose</b></td><td><b>Address</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/contactentity-type ADMIN}\">Administrative</span></td><td>Exemplar Road Exemplarton EX99 2AB United Kingdom </td></tr></table></div>"
+                },
+                "name": "Exemplar Devices Ltd",
+                "contact": [
+                    {
+                        "purpose": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/contactentity-type",
+                                    "code": "ADMIN",
+                                    "display": "Administrative"
+                                }
+                            ]
+                        },
+                        "address": {
+                            "line": [
+                                "Exemplar Road"
+                            ],
+                            "city": "Exemplarton",
+                            "postalCode": "EX99 2AB",
+                            "country": "United Kingdom"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/Exemplar-Devices-Organization"
+            }
+        },
+        //----------------------------
+        // Organization/Exemplar-Local-Sponsor-Organization
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "Exemplar-Local-Sponsor-Organization",
+                "language": "en",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Exemplar-Local-Sponsor-Organization</b></p><a name=\"Exemplar-Local-Sponsor-Organization\"> </a><a name=\"hcExemplar-Local-Sponsor-Organization\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><p><b>name</b>: Fictive Pharmaceuticals (Australia) Pty</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Purpose</b></td><td><b>Address</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/contactentity-type ADMIN}\">Administrative</span></td><td>Fictive High Road Fictive Docks New South Wales Australia </td></tr></table></div>"
+                },
+                "name": "Fictive Pharmaceuticals (Australia) Pty",
+                "contact": [
+                    {
+                        "purpose": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/contactentity-type",
+                                    "code": "ADMIN",
+                                    "display": "Administrative"
+                                }
+                            ]
+                        },
+                        "address": {
+                            "line": [
+                                "Fictive High Road"
+                            ],
+                            "city": "Fictive Docks",
+                            "state": "New South Wales",
+                            "country": "Australia"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/Exemplar-Local-Sponsor-Organization"
+            }
+        },
+        //----------------------------
+        // Organization/Exemplar-Regulator-Organization
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "Exemplar-Regulator-Organization",
+                "language": "en",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Exemplar-Regulator-Organization</b></p><a name=\"Exemplar-Regulator-Organization\"> </a><a name=\"hcExemplar-Regulator-Organization\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><p><b>name</b>: Exemplar Regulating Authority (ERA)</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Purpose</b></td><td><b>Address</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/contactentity-type ADMIN}\">Administrative</span></td><td>Exemplar Road Exemplarton EX99 2AB United Kingdom </td></tr></table></div>"
+                },
+                "name": "Exemplar Regulating Authority (ERA)",
+                "contact": [
+                    {
+                        "purpose": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/contactentity-type",
+                                    "code": "ADMIN",
+                                    "display": "Administrative"
+                                }
+                            ]
+                        },
+                        "address": {
+                            "line": [
+                                "Exemplar Road"
+                            ],
+                            "city": "Exemplarton",
+                            "postalCode": "EX99 2AB",
+                            "country": "United Kingdom"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/Exemplar-Regulator-Organization"
+            }
+        },
+        //----------------------------
+        // Organization/Exemplar-Sponsor-Organization
+        {
+            "resource": {
+                "resourceType": "Organization",
+                "id": "Exemplar-Sponsor-Organization",
+                "language": "en",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: Organization Exemplar-Sponsor-Organization</b></p><a name=\"Exemplar-Sponsor-Organization\"> </a><a name=\"hcExemplar-Sponsor-Organization\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><p><b>name</b>: Exemplar Pharmaceuticals Co.</p><h3>Contacts</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Purpose</b></td><td><b>Address</b></td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/contactentity-type ADMIN}\">Administrative</span></td><td>Exemplar Road Exemplarton EX99 2AB United Kingdom </td></tr><tr><td style=\"display: none\">*</td><td><span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C70946}\">Postal Address</span></td><td>Box 123 Exemplarton United Kingdom </td></tr></table></div>"
+                },
+                "name": "Exemplar Pharmaceuticals Co.",
+                "contact": [
+                    {
+                        "purpose": {
+                            "coding": [
+                                {
+                                    "system": "http://terminology.hl7.org/CodeSystem/contactentity-type",
+                                    "code": "ADMIN",
+                                    "display": "Administrative"
+                                }
+                            ]
+                        },
+                        "address": {
+                            "line": [
+                                "Exemplar Road"
+                            ],
+                            "city": "Exemplarton",
+                            "postalCode": "EX99 2AB",
+                            "country": "United Kingdom"
+                        }
+                    },
+                    {
+                        "purpose": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C70946",
+                                    "display": "Postal Address"
+                                }
+                            ]
+                        },
+                        "address": {
+                            "line": [
+                                "Box 123"
+                            ],
+                            "city": "Exemplarton",
+                            "country": "United Kingdom"
+                        }
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Organization/Exemplar-Sponsor-Organization"
+            }
+        },
+        //----------------------------
+        // Practitioner/Exemplar-CoSponsor-Practitioner
+        {
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "Exemplar-CoSponsor-Practitioner",
+                "language": "en",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner Exemplar-CoSponsor-Practitioner</b></p><a name=\"Exemplar-CoSponsor-Practitioner\"> </a><a name=\"hcExemplar-CoSponsor-Practitioner\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><p><b>name</b>: Dr Exemplar von Practitioner</p><p><b>address</b>: Exemplar Strasse Exemplarburg 75172 Germany </p></div>"
+                },
+                "name": [
+                    {
+                        "text": "Dr Exemplar von Practitioner"
+                    }
+                ],
+                "address": [
+                    {
+                        "line": [
+                            "Exemplar Strasse"
+                        ],
+                        "city": "Exemplarburg",
+                        "postalCode": "75172",
+                        "country": "Germany"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Practitioner/Exemplar-CoSponsor-Practitioner"
+            }
+        },
+        //----------------------------
+        // Practitioner/Exemplar-Local-Sponsor-Practitioner
+        {
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "Exemplar-Local-Sponsor-Practitioner",
+                "language": "en",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner Exemplar-Local-Sponsor-Practitioner</b></p><a name=\"Exemplar-Local-Sponsor-Practitioner\"> </a><a name=\"hcExemplar-Local-Sponsor-Practitioner\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><p><b>name</b>: Bruce Exemplar</p><p><b>address</b>: Fictive High Road Fictive Docks New South Wales Australia </p></div>"
+                },
+                "name": [
+                    {
+                        "text": "Bruce Exemplar"
+                    }
+                ],
+                "address": [
+                    {
+                        "line": [
+                            "Fictive High Road"
+                        ],
+                        "city": "Fictive Docks",
+                        "state": "New South Wales",
+                        "country": "Australia"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Practitioner/Exemplar-Local-Sponsor-Practitioner"
+            }
+        },
+        //----------------------------
+        // Practitioner/Exemplar-Sponsor-Expert-Practitioner
+        {
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "Exemplar-Sponsor-Expert-Practitioner",
+                "language": "en",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xml:lang=\"en\" xmlns=\"http://www.w3.org/1999/xhtml\" lang=\"en\"><p>Dr Exemplar Consultant:</p><p>Mobile: +44 7999 999 999</p><p>eMail: Ex.Consultant@ExemplarHospital.nhs.uk</p></div>"
+                },
+                "name": [
+                    {
+                        "text": "Dr Exemplar Consultant"
+                    }
+                ],
+                "telecom": [
+                    {
+                        "system": "email",
+                        "value": "Ex.Consultant@ExemplarHospital.nhs.uk",
+                        "rank": 2
+                    },
+                    {
+                        "system": "phone",
+                        "value": "+44 7999 999 999",
+                        "use": "mobile",
+                        "rank": 1
+                    }
+                ],
+                "address": [
+                    {
+                        "line": [
+                            "General Medicine Dept"
+                        ]
+                    },
+                    {
+                        "line": [
+                            "Exemplar Hospital"
+                        ],
+                        "city": "Exemplarton",
+                        "postalCode": "XR99 2AY",
+                        "country": "United Kingdom"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Practitioner/Exemplar-Sponsor-Expert-Practitioner"
+            }
+        },
+        //----------------------------
+        // Practitioner/Exemplar-Sponsor-Practitioner
+        {
+            "resource": {
+                "resourceType": "Practitioner",
+                "id": "Exemplar-Sponsor-Practitioner",
+                "language": "en",
+                "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: Practitioner Exemplar-Sponsor-Practitioner</b></p><a name=\"Exemplar-Sponsor-Practitioner\"> </a><a name=\"hcExemplar-Sponsor-Practitioner\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p></div><p><b>name</b>: Dr Exemplar Practitioner</p><p><b>address</b>: Exemplar Road Exemplarton EX99 2AB United Kingdom </p></div>"
+                },
+                "name": [
+                    {
+                        "text": "Dr Exemplar Practitioner"
+                    }
+                ],
+                "address": [
+                    {
+                        "line": [
+                            "Exemplar Road"
+                        ],
+                        "city": "Exemplarton",
+                        "postalCode": "EX99 2AB",
+                        "country": "United Kingdom"
+                    }
+                ]
+            },
+            "request": {
+                "method": "PUT",
+                "url": "Practitioner/Exemplar-Sponsor-Practitioner"
+            }
+        },
+        //----------------------------
+        // ResearchStudy/Exemplar-ResearchStudy-Current-Amendment
+        {
+            "resource": {
+                "resourceType": "ResearchStudy",
+                "id": "Exemplar-ResearchStudy-Current-Amendment",
+                "meta": {
+                    "profile": [
+                        "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study-profile"
+                    ]
+                },
+                "language": "en",
+                "text": {
+                    "status": "extensions",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"en\" lang=\"en\"><p class=\"res-header-id\"><b>Generated Narrative: ResearchStudy Exemplar-ResearchStudy-Current-Amendment</b></p><a name=\"Exemplar-ResearchStudy-Current-Amendment\"> </a><a name=\"hcExemplar-ResearchStudy-Current-Amendment\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: en</p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-m11-research-study-profile.html\">M11 Research Study Profile</a></p></div><blockquote><p><b>M11 Research Study Extension</b></p><ul><li>originalProtocol: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C218488}\">Protocol Previously Amended See Summary of Changes Before the Table of Contents</span></li><li>versionDate: 2017-10-01</li></ul></blockquote><blockquote><p><b>M11_Approval</b></p><ul><li>approvalDate: 2017-10-05</li><li>signature: No display for Signature  (data: PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPEVudmVsb3BlIHhtbG5zPSJ1cm46ZW52ZWxvcGUiPgogIDxTaWduYXR1cmUgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPgogICAgPFNpZ25lZEluZm8+CiAgICAgIDxDYW5vbmljYWxpemF0aW9uTWV0aG9kIAogICAgICAgICAgIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMteG1sLWMxNG4tCjIwMDEwMzE1I1dpdGhDb21tZW50cyIvPgogICAgICA8U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS8KeG1sZHNpZyNkc2Etc2hhMSIvPgogICAgICA8UmVmZXJlbmNlIFVSST0iIj4KICAgICAgICA8VHJhbnNmb3Jtcz4KICAgICAgICAgIDxUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5Lwp4bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KICAgICAgICA8L1RyYW5zZm9ybXM+CiAgICAgICAgPERpZ2VzdE1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkvCnhtbGRzaWcjc2hhMSIvPgogICAgICAgIDxEaWdlc3RWYWx1ZT51b29xYldZYTVWQ3FjSkNidXltQktxbTE3dlk9PC9EaWdlc3RWYWx1ZT4KICAgICAgPC9SZWZlcmVuY2U+CiAgICA8L1NpZ25lZEluZm8+CjxTaWduYXR1cmVWYWx1ZT4KS2VkSnVUb2I1Z3R2WXg5cU0zazNnbTdrYkxCd1ZiRVFSbDI2UzJ0bVhqcU5ORDdNUkd0b2V3PT0KICAgIDwvU2lnbmF0dXJlVmFsdWU+CiAgICA8S2V5SW5mbz4KICAgICAgPEtleVZhbHVlPgogICAgICAgIDxEU0FLZXlWYWx1ZT4KICAgICAgICAgIDxQPgovS2FDem80U3lyb203OHozRVE1U2JiQjRzRjdleTgwZXRLSUk4NjRXRjY0QjgxdVJwSDV0OWpRVHhlCkV1MEltYnpSTXF6VkRaa1ZHOXhEN25OMWt1Rnc9PQogICAgICAgICAgPC9QPgogICAgICAgICAgPFE+bGk3ZHpEYWN1bzY3Smc3bXRxRW0yVFJ1T01VPTwvUT4KICAgICAgICAgIDxHPlo0UnhzbnFjOUU3cEdrbkZGSDJ4cWFyeVJQQmFRMDFraHBNZExSUW5HNTQxQXd0eC8KWFBhRjVCcHN5NHBOV01PSENCaU5VME5vZ3BzUVc1UXZubE1wQT09CiAgICAgICAgICA8L0c+CiAgICAgICAgICA8WT5xVjM4SXFyV0pHMFYvCm1aUXZSVmkxT0h3OVpqODRuREM0ak84UDBheGkxZ2I2ZCs0NzV5aE1qU2MvCkJySVZDNThXM3lkYmtLK1JpNE9LYmFSWmxZZVJBPT0KICAgICAgICAgPC9ZPgogICAgICAgIDwvRFNBS2V5VmFsdWU+CiAgICAgIDwvS2V5VmFsdWU+CiAgICA8L0tleUluZm8+CiAgPC9TaWduYXR1cmU+CjwvRW52ZWxvcGU+IA==)</li><li>signatureUrl: <a href=\"https://somelocation\">https://somelocation</a></li><li>signatureMethod: electronic and wet ink copy</li></ul></blockquote><blockquote><p><b>M11_ProtocolAmendment</b></p><blockquote><p><b>url</b></p>identifier</blockquote><p><b>value</b>: Amendment Identifier/ABC-Exemplar(a)</p><blockquote><p><b>url</b></p>previous</blockquote><p><b>value</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C218488}\">Protocol Previously Amended See Summary of Changes Before the Table of Contents</span></p><blockquote><p><b>url</b></p>scope</blockquote><p><b>value</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C217026}\">Not Global</span></p><blockquote><p><b>url</b></p><a href=\"http://hl7.org/fhir/R5/valueset-country.html\">Country ValueSet</a></blockquote><p><b>value</b>: <span title=\"Codes:{urn:iso:std:iso:3166 DE}\">Germany</span></p><blockquote><p><b>url</b></p><a href=\"http://hl7.org/fhir/R5/valueset-country.html\">Country ValueSet</a></blockquote><p><b>value</b>: <span title=\"Codes:{urn:iso:std:iso:3166 GB}\">United Kingdom of Great Britain and Northern Ireland</span></p><blockquote><p><b>url</b></p>region</blockquote><p><b>value</b>: <span title=\"Codes:{urn:iso:std:iso:3166:-2 AU-NSW}\">New South Wales</span></p><blockquote><p><b>url</b></p>site</blockquote><p><b>value</b>: <code>https://example.org/site-identifier</code>/exemplarSite-14</p><p><b>scope</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C41065}\">Locally</span></p><p><b>number</b>: 234</p><blockquote><p><b>url</b></p><a href=\"StructureDefinition-m11-amendment-scope-impact.html\">M11_AmendmentScopeImpact</a></blockquote><p><b>scope</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C68846}\">Global</span></p><p><b>number</b>: 983</p><blockquote><p><b>url</b></p><a href=\"StructureDefinition-m11-amendment-scope-impact.html\">M11_AmendmentScopeImpact</a></blockquote><blockquote><p><b>url</b></p>primaryReason</blockquote><p><b>value</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C218490}\">Regulatory Agency Request to Amend Amendment Reason</span></p><blockquote><p><b>url</b></p>secondaryReason</blockquote><p><b>value</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C218494}\">Manufacturing Change Amendment Reason</span></p><blockquote><p><b>url</b></p>secondaryReason</blockquote><p><b>value</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C17649}\">Packaging revision</span></p><blockquote><p><b>url</b></p><a href=\"http://hl7.org/fhir/R5/codesystem-example-summary.html\">summary</a></blockquote><p><b>value</b>: Manufacturing chanage to enable packaging change to recyclable materials.</p><blockquote><p><b>url</b></p>substantialImpactSafety</blockquote><p><b>value</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C49488}\">Yes</span></p><blockquote><p><b>url</b></p>substantialImpactSafetyComment</blockquote><p><b>value</b>: Specifically implemented to decrease safety risks.</p><blockquote><p><b>url</b></p>substantialImpactReliability</blockquote><p><b>value</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C49487}\">No</span></p><p><b>detail</b>: Clarification</p><p><b>rationale</b>: Clarification of synopsis at request of regulator</p><p><b>section</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C218515}\">ICH M11 Protocol Section 1.1 Protocol Synopsis</span></p><blockquote><p><b>url</b></p><a href=\"StructureDefinition-m11-amendment-detail.html\">M11_AmendmentDetails</a></blockquote><p><b>detail</b>: Exclusion change</p><p><b>rationale</b>: Exclude regular drinkers at request of regulator</p><p><b>section</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C218550}\">ICH M11 Protocol Section 5.3 Exclusion Criteria</span></p><blockquote><p><b>url</b></p><a href=\"StructureDefinition-m11-amendment-detail.html\">M11_AmendmentDetails</a></blockquote><p><b>detail</b>: Packaging change</p><p><b>rationale</b>: Change to recyclable packaging (stated in proprietary name).</p><p><b>section</b>: <span title=\"Codes:{http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl C222769}\">ICH M11 Protocol Section Title Page</span></p><blockquote><p><b>url</b></p><a href=\"StructureDefinition-m11-amendment-detail.html\">M11_AmendmentDetails</a></blockquote><blockquote><p><b>url</b></p>description</blockquote><p><b>value</b>: </p><div><p>#Protocol ABC-Exemplar A Phase 3 Study of Inhaled Exoticillin compared to Intramuscular Exoticillin for Treatment of Bronchtis Japanese Patients with Iatrogenic Diabetes Mellitus\nhas been amended.\nThe new protocol is indicated by <em>Amendment (a)</em> and will be used to conduct the study in place of any preceding version of the protocol.\nThe overall changes and rationale for the changes made to this protocol are as follows:\n- An exclusion criterion for patients with retinopathy or maculopathy was added due to the potential risk of\nfundal hemorrhage induced by hypoglycemia.\n- The Intravenous Exoticillin GlucaGen reconstitution volume was changed from 1.0 mL to 1.1 mL in accordance with instructions in the Summary of Product Characteristics (2015).</p>\n</div></blockquote><p><b>identifier</b>: Sponsor Protocol Identifier/ABC-Exemplar\u00a0(use:\u00a0usual,\u00a0)</p><p><b>version</b>: (a)</p><p><b>status</b>: Active</p></div>"
+                },
+                "extension": [
+                    {
+                        "extension": [
+                            {
+                                "url": "originalProtocol",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "code": "C218488",
+                                            "display": "Protocol Previously Amended See Summary of Changes Before the Table of Contents"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "versionDate",
+                                "valueDate": "2017-10-01"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-research-study"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "approvalDate",
+                                "valueDate": "2017-10-05"
+                            },
+                            {
+                                "url": "signature",
+                                "valueSignature": {
+                                    "data": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPEVudmVsb3BlIHhtbG5zPSJ1cm46ZW52ZWxvcGUiPgogIDxTaWduYXR1cmUgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkveG1sZHNpZyMiPgogICAgPFNpZ25lZEluZm8+CiAgICAgIDxDYW5vbmljYWxpemF0aW9uTWV0aG9kIAogICAgICAgICAgIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvVFIvMjAwMS9SRUMteG1sLWMxNG4tCjIwMDEwMzE1I1dpdGhDb21tZW50cyIvPgogICAgICA8U2lnbmF0dXJlTWV0aG9kIEFsZ29yaXRobT0iaHR0cDovL3d3dy53My5vcmcvMjAwMC8wOS8KeG1sZHNpZyNkc2Etc2hhMSIvPgogICAgICA8UmVmZXJlbmNlIFVSST0iIj4KICAgICAgICA8VHJhbnNmb3Jtcz4KICAgICAgICAgIDxUcmFuc2Zvcm0gQWxnb3JpdGhtPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwLzA5Lwp4bWxkc2lnI2VudmVsb3BlZC1zaWduYXR1cmUiLz4KICAgICAgICA8L1RyYW5zZm9ybXM+CiAgICAgICAgPERpZ2VzdE1ldGhvZCBBbGdvcml0aG09Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvMDkvCnhtbGRzaWcjc2hhMSIvPgogICAgICAgIDxEaWdlc3RWYWx1ZT51b29xYldZYTVWQ3FjSkNidXltQktxbTE3dlk9PC9EaWdlc3RWYWx1ZT4KICAgICAgPC9SZWZlcmVuY2U+CiAgICA8L1NpZ25lZEluZm8+CjxTaWduYXR1cmVWYWx1ZT4KS2VkSnVUb2I1Z3R2WXg5cU0zazNnbTdrYkxCd1ZiRVFSbDI2UzJ0bVhqcU5ORDdNUkd0b2V3PT0KICAgIDwvU2lnbmF0dXJlVmFsdWU+CiAgICA8S2V5SW5mbz4KICAgICAgPEtleVZhbHVlPgogICAgICAgIDxEU0FLZXlWYWx1ZT4KICAgICAgICAgIDxQPgovS2FDem80U3lyb203OHozRVE1U2JiQjRzRjdleTgwZXRLSUk4NjRXRjY0QjgxdVJwSDV0OWpRVHhlCkV1MEltYnpSTXF6VkRaa1ZHOXhEN25OMWt1Rnc9PQogICAgICAgICAgPC9QPgogICAgICAgICAgPFE+bGk3ZHpEYWN1bzY3Smc3bXRxRW0yVFJ1T01VPTwvUT4KICAgICAgICAgIDxHPlo0UnhzbnFjOUU3cEdrbkZGSDJ4cWFyeVJQQmFRMDFraHBNZExSUW5HNTQxQXd0eC8KWFBhRjVCcHN5NHBOV01PSENCaU5VME5vZ3BzUVc1UXZubE1wQT09CiAgICAgICAgICA8L0c+CiAgICAgICAgICA8WT5xVjM4SXFyV0pHMFYvCm1aUXZSVmkxT0h3OVpqODRuREM0ak84UDBheGkxZ2I2ZCs0NzV5aE1qU2MvCkJySVZDNThXM3lkYmtLK1JpNE9LYmFSWmxZZVJBPT0KICAgICAgICAgPC9ZPgogICAgICAgIDwvRFNBS2V5VmFsdWU+CiAgICAgIDwvS2V5VmFsdWU+CiAgICA8L0tleUluZm8+CiAgPC9TaWduYXR1cmU+CjwvRW52ZWxvcGU+IA=="
+                                }
+                            },
+                            {
+                                "url": "signatureUrl",
+                                "valueUrl": "https://somelocation"
+                            },
+                            {
+                                "url": "signatureMethod",
+                                "valueString": "electronic and wet ink copy"
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-approval"
+                    },
+                    {
+                        "extension": [
+                            {
+                                "url": "identifier",
+                                "valueIdentifier": {
+                                    "type": {
+                                        "text": "Amendment Identifier"
+                                    },
+                                    "system": "https://example.org/amendment-identifier",
+                                    "value": "ABC-Exemplar(a)"
+                                }
+                            },
+                            {
+                                "url": "previous",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "code": "C218488",
+                                            "display": "Protocol Previously Amended See Summary of Changes Before the Table of Contents"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "scope",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "code": "C217026",
+                                            "display": "Not Global"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "country",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "urn:iso:std:iso:3166",
+                                            "code": "DE",
+                                            "display": "Germany"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "country",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "urn:iso:std:iso:3166",
+                                            "code": "GB",
+                                            "display": "United Kingdom of Great Britain and Northern Ireland"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "region",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "urn:iso:std:iso:3166:-2",
+                                            "code": "AU-NSW",
+                                            "display": "New South Wales"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "site",
+                                "valueIdentifier": {
+                                    "system": "https://example.org/site-identifier",
+                                    "value": "exemplarSite-14"
+                                }
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "scope",
+                                        "valueCodeableConcept": {
+                                            "coding": [
+                                                {
+                                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                                    "code": "C41065",
+                                                    "display": "Locally"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "url": "number",
+                                        "valuePositiveInt": 234
+                                    }
+                                ],
+                                "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-amendment-scope-impact"
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "scope",
+                                        "valueCodeableConcept": {
+                                            "coding": [
+                                                {
+                                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                                    "code": "C68846",
+                                                    "display": "Global"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    {
+                                        "url": "number",
+                                        "valuePositiveInt": 983
+                                    }
+                                ],
+                                "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-amendment-scope-impact"
+                            },
+                            {
+                                "url": "primaryReason",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "code": "C218490",
+                                            "display": "Regulatory Agency Request to Amend Amendment Reason"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "secondaryReason",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "code": "C218494",
+                                            "display": "Manufacturing Change Amendment Reason"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "secondaryReason",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "code": "C17649",
+                                            "display": "Other"
+                                        }
+                                    ],
+                                    "text": "Packaging revision"
+                                }
+                            },
+                            {
+                                "url": "summary",
+                                "valueString": "Manufacturing chanage to enable packaging change to recyclable materials."
+                            },
+                            {
+                                "url": "substantialImpactSafety",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "code": "C49488",
+                                            "display": "Yes"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "url": "substantialImpactSafetyComment",
+                                "valueString": "Specifically implemented to decrease safety risks."
+                            },
+                            {
+                                "url": "substantialImpactReliability",
+                                "valueCodeableConcept": {
+                                    "coding": [
+                                        {
+                                            "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                            "code": "C49487",
+                                            "display": "No"
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "detail",
+                                        "valueString": "Clarification"
+                                    },
+                                    {
+                                        "url": "rationale",
+                                        "valueString": "Clarification of synopsis at request of regulator"
+                                    },
+                                    {
+                                        "url": "section",
+                                        "valueCodeableConcept": {
+                                            "coding": [
+                                                {
+                                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                                    "code": "C218515",
+                                                    "display": "ICH M11 Protocol Section 1.1 Protocol Synopsis"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-amendment-detail"
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "detail",
+                                        "valueString": "Exclusion change"
+                                    },
+                                    {
+                                        "url": "rationale",
+                                        "valueString": "Exclude regular drinkers at request of regulator"
+                                    },
+                                    {
+                                        "url": "section",
+                                        "valueCodeableConcept": {
+                                            "coding": [
+                                                {
+                                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                                    "code": "C218550",
+                                                    "display": "ICH M11 Protocol Section 5.3 Exclusion Criteria"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-amendment-detail"
+                            },
+                            {
+                                "extension": [
+                                    {
+                                        "url": "detail",
+                                        "valueString": "Packaging change"
+                                    },
+                                    {
+                                        "url": "rationale",
+                                        "valueString": "Change to recyclable packaging (stated in proprietary name)."
+                                    },
+                                    {
+                                        "url": "section",
+                                        "valueCodeableConcept": {
+                                            "coding": [
+                                                {
+                                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                                    "code": "C222769",
+                                                    "display": "ICH M11 Protocol Section Title Page"
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-amendment-detail"
+                            },
+                            {
+                                "url": "description",
+                                "valueMarkdown": "#Protocol ABC-Exemplar A Phase 3 Study of Inhaled Exoticillin compared to Intramuscular Exoticillin for Treatment of Bronchtis Japanese Patients with Iatrogenic Diabetes Mellitus\n    has been amended.\n    The new protocol is indicated by *Amendment (a)* and will be used to conduct the study in place of any preceding version of the protocol. \n    The overall changes and rationale for the changes made to this protocol are as follows: \n    - An exclusion criterion for patients with retinopathy or maculopathy was added due to the potential risk of \n    fundal hemorrhage induced by hypoglycemia. \n    - The Intravenous Exoticillin GlucaGen reconstitution volume was changed from 1.0 mL to 1.1 mL in accordance with instructions in the Summary of Product Characteristics (2015)."
+                            }
+                        ],
+                        "url": "http://hl7.org/fhir/uv/clinical-study-protocol/StructureDefinition/m11-protocol-amendment"
+                    }
+                ],
+                "identifier": [
+                    {
+                        "use": "usual",
+                        "type": {
+                            "coding": [
+                                {
+                                    "system": "http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl",
+                                    "code": "C132351",
+                                    "display": "Sponsor Protocol Identifier"
+                                }
+                            ]
+                        },
+                        "system": "https://exemplarSponsor.com/sponsor-identifier",
+                        "value": "ABC-Exemplar"
+                    }
+                ],
+                "version": "(a)",
+                "status": "active"
+            },
+            "request": {
+                "method": "PUT",
+                "url": "ResearchStudy/Exemplar-ResearchStudy-Current-Amendment"
+            }
+        }
+    ]
+}
