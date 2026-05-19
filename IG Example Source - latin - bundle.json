@@ -1,8 +1,9 @@
-// Content drawn from UDP IG Example - resources placed on server individually
-// PUT using "https://[myHost]"
+// Content drawn from UDP IG Example - resources placed in a single bundle
+// PUT using "https://[myHost]/Bundle/Exemplar-ResearchStudy-001"
 // PUT creates if id not found otherwise does an update
 {
     "resourceType": "Bundle",
+    "id": "Exemplar-Bundle-001",
     "type": "transaction",
     "entry": [
         //----------------------------
